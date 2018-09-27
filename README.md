@@ -10,7 +10,7 @@ This poster outlines a first-pass pharmacovigilance methodology for detecting AD
 
 This section outlines the workflow taken for producing the results of this poster. The most detail are in the code itself. But the boxes (indicating the script type) contain the scripts that are used in the methodology.
 
-<embed src="figs/Script-workflow.pdf">
+<object src="figs/Script-workflow.pdf"><embed src="figs/Script-workflow.pdf" type="application/pdf"></embed></object>
 
 Legend:
 
