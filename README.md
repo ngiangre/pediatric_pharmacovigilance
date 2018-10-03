@@ -2,6 +2,8 @@
 
 Code and documentation accompanying the poster "Using precision pharmacoviglance to detect developmentally-regulated adverse drug reactions: a case study with antiepileptic drugs" presented at the 2018 OHDSI symposium in Bethesda, MD, USA
 
+Unfortunately, this repository isn't set up properly as an R project or an R package, so code and documentation is annotated manually. The main purpose is to increase transparency in the methodology used in this project. Subsequent work will employ better software development practices. 
+
 ## Introduction
 
 This poster outlines a first-pass pharmacovigilance methodology for detecting ADRs that disproportionally affect those within younger age categories relative to adults. The following briefly describes the code used to generate the findings, and refer to the Rmarkdown notebook for figure creation and other visualizations. If you find this useful, would like to discuss this work, or would like to collaborate, please contact me at nick.giangreco@gmail.com. If you would like to improve the code and documentation, feel free to do a pull request!
