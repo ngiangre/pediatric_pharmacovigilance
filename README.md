@@ -58,7 +58,7 @@ This is where the candidate ADRs are detected, using the same filtering as the s
 
 ## Data Availability
 
-Because of the size of the processed AEOLU dataset (9.53Gb), it is ignored in this repository. But if you would like access to it, please let me know at nick.giangreco@gmail.com, and I'd be happy to share it!
+Because of the size of the processed AEOLUS dataset (9.53Gb) and vocabulary files, they are ignored in this repository. But if you would like access to it, please let me know at nick.giangreco@gmail.com, and I'd be happy to share it!
 
 ## References
 
