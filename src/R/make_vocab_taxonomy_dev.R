@@ -18,11 +18,11 @@ library(data.table)
 
 # set variables -----------------------------------------------------------
 
-dir_path <- "../../vocabulary_download_v5_{aaf1154e-b4a4-479b-9ed8-817e30c0ba84}_1508422779545/"
+data_dir <- "../../data/"
+
+dir_path <- paste0(data_dir,"vocabulary_download_v5_{aaf1154e-b4a4-479b-9ed8-817e30c0ba84}_1508422779545/")
 
 vocab <- "SNOMED"
-
-data_dir <- "../../data/"
 
 # load OHDSI vocabularies -------------------------------------------------
 
