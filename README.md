@@ -10,7 +10,7 @@ This poster outlines a first-pass pharmacovigilance methodology for detecting AD
 
 ## Coding Workflow
 
-This section outlines the workflow taken for producing the results of this poster. The most detail are in the code itself. But the boxes (indicating the script type) contain the scripts that are used in the methodology.
+This section outlines the workflow taken for producing the results of this poster. The most detail are in the code itself. But the boxes (indicating the script type) contain the scripts that are used in the methodology. Most of the scripts were run on a private cluster to take advantage of parallelism over multiple cores.
 
 <img src="figs/Script-workflow.png">
 
