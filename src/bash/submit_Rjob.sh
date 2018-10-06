@@ -1,9 +1,9 @@
 #!/bin/bash
 
-if [ -f ~/output/$1.o ]; then
-rm ~/output/$1.o
+if [ -f $1.o ]; then
+rm $1.o
 fi
-if [ -f ~/error/$1.e ]; then
-rm ~/error/$1.e
+if [ -f $1.e ]; then
+rm $1.e
 fi
-bsub -o ~/output/$1.o -e ~/error/$1.e "Rscript $1" -J $1
+bsub -o $1.o -e $1.e "Rscript $1" -J $1
