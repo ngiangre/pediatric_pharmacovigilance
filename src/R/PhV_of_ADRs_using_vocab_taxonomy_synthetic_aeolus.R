@@ -7,10 +7,10 @@ cat("start: ",as.character(Sys.time()))
 #' 
 #' analagous to PhV_of_ADRs.R script but using synthetic dataset
 #' 
-#' EXAMPLE RUN ON LOCAL:
+#' EXAMPLE RUN ON CLUSTER:
 #' ---------------------
 #' 
-#' source in RStudio
+#' Rscript PhV_of_ADRs_using_vocab_taxonomy_synthetic_aeolus.R > PhV_of_ADRs_using_vocab_taxonomy_synthetic_aeolus.log
 #' 
 # set variables -----------------------------------------------------------
 

@@ -1,4 +1,4 @@
-cat("start: ",as.character(Sys.time()))
+cat("start: ",as.character(Sys.time()),"\n")
 
 
 # PURPOSE -----------------------------------------------------------------
@@ -6,15 +6,10 @@ cat("start: ",as.character(Sys.time()))
 #' To retrieve young age category biased ADRs computed from PhV_of_ADR scripts. Also evaluates ADRs for confounding/association with covariates.
 #' 
 #' 
-#' EXAMPLE RUN ON LOCAL
+#' EXAMPLE RUN ON CLUSTER
 #' --------------------
 #' 
-#' Rscript select_young_age_category_biased_ADRs_dev.R ../../data/ADRs_PhV/ATC/ATC_3rd/ANTIEPILEPTICS/ALL_DRUGS/PhV_of_ADRs.csv
-#' 
-#' OUTPUT
-#' ------
-#' 
-#' csv file like original but with appended boolean column indicating candidate young age category ADR
+#' Rscript select_young_age_category_biased_ADRs_dev.R ../../data/ADRs_PhV/ATC/ATC_3rd/ANTIEPILEPTICS/ALL_DRUGS/PhV_of_ADRs.csv 
 #' 
 
 

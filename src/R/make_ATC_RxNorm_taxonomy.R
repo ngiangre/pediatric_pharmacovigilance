@@ -1,4 +1,4 @@
-cat("start: ",as.character(Sys.time()))
+cat("start: ",as.character(Sys.time()),"/n")
 
 # PURPOSE -----------------------------------------------------------------
 
@@ -9,6 +9,10 @@ cat("start: ",as.character(Sys.time()))
 #' 
 #' This will be useful for doing the PhV statistics later on
 #' 
+#' EXAMPL RUN ON CLUSTER:
+#' ----------------------
+#' 
+#' Rscript make_ATC_RxNorm_taxonomy.R > make_ATC_RxNorm_taxonomy.log
 
 
 # load libraries ----------------------------------------------------------

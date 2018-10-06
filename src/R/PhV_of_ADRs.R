@@ -1,4 +1,4 @@
-cat("start: ",as.character(Sys.time()))
+cat("start: ",as.character(Sys.time()),"\n")
 
 # PURPOSE -----------------------------------------------------------------
 
@@ -6,20 +6,15 @@ cat("start: ",as.character(Sys.time()))
 #' 
 #' Assumption is each ADR is an isolated observable event among all others.
 #' 
-#' EXAMPLE RUN ON MUNNIN:
+#' EXAMPLE RUN ON CLUSTER:
 #' ---------------------
 #' 
 #' 1st parameter : ANY ATC CLASS NAME OR RXNORM INGREDIENT NAME
 #' 2nd parameter : [ 1, 2, 3, 4, 5 ] WILL MAP TO CONCEPT_CLASS_ID. 
 #' 3rd parameter : covariate in aeolus (column name to stratify by)
 #' 
-#' source ../bash/submit_Rjob_3arg.sh PhV_of_ADRs.R "ANTIEPILEPTICS" 3 "dev_age_cat"
+#' source ../bash/submit_Rjob_3arg.sh PhV_of_ADRs.R "ANTIEPILEPTICS" 3 "dev_age_cat" > PhV_of_ADRs.log
 #' 
-#' 
-#' EXAMPLE RUN ON LOCAL:
-#' ---------------------
-#' 
-#' Rscript PhV_of_ADRs.R "ANTIEPILEPTICS" 3 "dev_age_cat"
 
 # set variables -----------------------------------------------------------
 

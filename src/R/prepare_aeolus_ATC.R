@@ -1,4 +1,4 @@
-cat("start: ",as.character(Sys.time()))
+cat("start: ",as.character(Sys.time()),"\n")
 
 
 # PURPOSE ------------------------------------------------------------
@@ -10,7 +10,7 @@ cat("start: ",as.character(Sys.time()))
 #' 
 #' EXAMPLE RUN ON CLUSTER:
 #' ----------------------
-#' source ../bash/submit_Rjob.sh prepare_aeolus_ATC.R
+#' source ../bash/submit_Rjob.sh prepare_aeolus_ATC.R > prepare_aeolus_ATC.log
 #' 
 
 # Libraries ---------------------------------------------------------------

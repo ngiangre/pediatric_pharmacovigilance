@@ -1,4 +1,4 @@
-cat("start: ",as.character(Sys.time()))
+cat("start: ",as.character(Sys.time()),"\n")
 
 
 # PURPOSE -----------------------------------------------------------------
@@ -7,6 +7,10 @@ cat("start: ",as.character(Sys.time()))
 #' 
 #' These injected ADRs will serve as positive and negative control age-related ADRs
 #' 
+#' EXAMPLE RUN ON CLUSTER
+#' ----------------------
+#' 
+#' Rscript prepare_synthetic_aeolus.R > prepare_synthetic_aeolus.log
 #' 
 
 

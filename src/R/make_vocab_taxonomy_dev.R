@@ -1,4 +1,4 @@
-cat("start: ",as.character(Sys.time()))
+cat("start: ",as.character(Sys.time()),"\n")
 
 # PURPOSE -----------------------------------------------------------------
 
@@ -8,8 +8,9 @@ cat("start: ",as.character(Sys.time()))
 #' 
 #' Need tables downloaded from Athena at http://athena.ohdsi.org/search-terms/terms
 #' 
-#' EXAMPLE RUN ON LOCAL:
-#' source in RStudio
+#' EXAMPLE RUN ON CLUSTER:
+#' 
+#' Rscript make_vocab_taxonomy_dev.R > make_vocab_taxonomy_dev.log
 #' 
 
 # load libraries ----------------------------------------------------------

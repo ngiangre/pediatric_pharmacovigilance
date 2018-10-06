@@ -1,18 +1,14 @@
-cat("start: ",as.character(Sys.time()))
+cat("start: ",as.character(Sys.time()),"\n")
 
 
 # PURPOSE -----------------------------------------------------------------
 
 #' To retrieve young age category biased ADRs computed from PhV_of_ADrugClassRs_using_vocab_taxonomy
 #' 
-#' EXAMPLE RUN ON LOCAL:
+#' EXAMPLE RUN ON CLUSTER:
 #' ---------------------
 #' 
 #' Rscript select_young_age_category_biased_ADRs_control_detection_synthetic_aeolus "Synthetic"
-#' 
-#' Output:
-#' 
-#' confusion matrix
 #' 
 
 
