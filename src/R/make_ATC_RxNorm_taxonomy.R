@@ -1,3 +1,4 @@
+cat("start: ",as.character(Sys.time()))
 
 # PURPOSE -----------------------------------------------------------------
 
@@ -53,5 +54,13 @@ CA_atc_rxnorm_vocab <- merge(CA_rxnorm_vocab_atc_merge,tmp,
       by.x=c("concept_id_2"),
       by.y=c("ancestor_concept_id"))
 
+
+# output ------------------------------------------------------------------
+
+
 bind_rows(CA_atc_vocab,CA_atc_rxnorm_vocab) %>% 
   fst::write_fst(paste0(data_dir,"ATC_RxNorm_hierarchy.fst"))
+
+
+
+cat("end: ",as.character(Sys.time()))

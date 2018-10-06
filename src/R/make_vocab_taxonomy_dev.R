@@ -1,3 +1,4 @@
+cat("start: ",as.character(Sys.time()))
 
 # PURPOSE -----------------------------------------------------------------
 
@@ -87,3 +88,7 @@ all %>%
 
 all %>% 
   fst::write_fst(paste0(data_dir,vocab,"_is_a_hierarchy.fst"))
+
+
+
+cat("end: ",as.character(Sys.time()))

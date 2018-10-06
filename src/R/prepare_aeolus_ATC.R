@@ -350,83 +350,13 @@ aged_wdrugoutcomeconceptsgender <- left_join(aged_wdrugoutcomeconcepts,
 
 rm(aged_wdrugoutcomeconcepts)
 
-# AEOLUS joining of indications - work on this!-----------------------------------------------------
-
-
-# indications <- dplyr::tbl(con,'indications')
-# 
-# indications <- indications %>% 
-#   mutate(isr_report_id = as.character(isr_report_id))
-# 
-# for_joining <- indications %>% 
-#   select(isr_report_id,indication_descrip_term) %>% 
-#   rename(
-#     indication = indication_descrip_term
-#   ) %>% 
-#   collect() %>% 
-#   mutate(
-#     indication = gsub("\r","",indication)
-#   )
-# 
-# rm(indications)
-# 
-# aged_wdrugoutcomeconceptsgenderindications <- left_join(aged_wdrugoutcomeconceptsgender,
-#                                              for_joining,
-#                                              by=c("id" = "isr_report_id")) %>%
-#   select(id:age_code,gender_code,indications,report_year:drug_outcome_name)
-# 
-# rm(aged_wdrugoutcomeconceptsgender)
-
-
-# Writing tables to SQL ---------------------------------------------------
-
-db <- "user_npg2108"
-
-con <- DBI::dbConnect(RMySQL::MySQL(),
-                      user = readr::read_tsv("../../.my.cnf")$u,
-                      password = readr::read_tsv("../../.my.cnf")$pw,
-                      host = "127.0.0.1",
-                      port=3307,
-                      dbname=db)
-
-DBI::dbWriteTable(conn = con,
-                  name='aeolus',
-                  value=aged_wdrugoutcomeconceptsgender,
-                  overwrite=T)
-
-DBI::dbDisconnect(con)
-
 # Writing tables ----------------------------------------------------------
+
 cat("Writing tables...\n\n")
 
 file <- "../../data/aeolus"
-aged_wdrugoutcomeconceptsgender %>% feather::write_feather(paste0(file,".feather"))
 aged_wdrugoutcomeconceptsgender %>% fst::write_fst(paste0(file,".fst"))
 
-top5 <- aged_wdrugoutcomeconceptsgender %>% 
-  group_by(drug_concept_id) %>% 
-  count() %>% 
-  arrange(desc(n)) %>% 
-  select(drug_concept_id) %>% 
-  distinct() %>% 
-  head(5) %>% unlist %>% unname
-
-file <- "../../data/aeolus_top5drugs.feather"
-aged_wdrugoutcomeconceptsgender %>% 
-  filter(drug_concept_id %in% top5) %>% 
-  feather::write_feather(file)
-
-
-# Writing one drug per report Aeolus subsetting -----------------------------------
-
-dt <- data.table(aged_wdrugoutcomeconceptsgender)
-setkey(dt,id)
-one_drug <- dt[,.(drug_concept_id,id)][,.N,by=.(id)][N==1][,id]
-aeolus_one_drug_reports <- dt[id %in% one_drug]
-
-file <- "../../data/aeolus_1drug_reports"
-dt %>% feather::write_feather(paste0(file,".feather"))
-dt %>% fst::write_fst(paste0(file,".fst"))
 
 
 
