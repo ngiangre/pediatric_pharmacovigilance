@@ -14,7 +14,7 @@ cat("start: ",as.character(Sys.time()))
 #' 2nd parameter : [ 1, 2, 3, 4, 5 ] WILL MAP TO CONCEPT_CLASS_ID. 
 #' 3rd parameter : covariate in aeolus (column name to stratify by)
 #' 
-#' source ~/Scripts/bash/submit_Rjob_3arg.sh PhV_of_ADRs_using_vocab_taxonomy.R "ANTIEPILEPTICS" 3 "dev_age_cat"
+#' source ../bash/submit_Rjob_3arg.sh PhV_of_ADRs_using_vocab_taxonomy.R "ANTIEPILEPTICS" 3 "dev_age_cat"
 #' 
 #' 
 #' EXAMPLE RUN ON LOCAL:
