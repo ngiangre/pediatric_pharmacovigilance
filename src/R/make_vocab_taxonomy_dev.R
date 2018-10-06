@@ -10,7 +10,7 @@ cat("start: ",as.character(Sys.time()),"\n")
 #' 
 #' EXAMPLE RUN ON CLUSTER:
 #' 
-#' Rscript make_vocab_taxonomy_dev.R > make_vocab_taxonomy_dev.log
+#' Rscript make_vocab_taxonomy_dev.R 
 #' 
 
 # load libraries ----------------------------------------------------------

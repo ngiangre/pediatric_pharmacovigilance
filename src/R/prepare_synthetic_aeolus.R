@@ -10,7 +10,7 @@ cat("start: ",as.character(Sys.time()),"\n")
 #' EXAMPLE RUN ON CLUSTER
 #' ----------------------
 #' 
-#' Rscript prepare_synthetic_aeolus.R > prepare_synthetic_aeolus.log
+#' Rscript prepare_synthetic_aeolus.R 
 #' 
 
 

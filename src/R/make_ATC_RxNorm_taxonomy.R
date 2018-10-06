@@ -12,7 +12,7 @@ cat("start: ",as.character(Sys.time()),"/n")
 #' EXAMPL RUN ON CLUSTER:
 #' ----------------------
 #' 
-#' Rscript make_ATC_RxNorm_taxonomy.R > make_ATC_RxNorm_taxonomy.log
+#' Rscript make_ATC_RxNorm_taxonomy.R 
 
 
 # load libraries ----------------------------------------------------------

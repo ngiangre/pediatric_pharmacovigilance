@@ -10,7 +10,7 @@ cat("start: ",as.character(Sys.time()),"\n")
 #' EXAMPLE RUN ON CLUSTER:
 #' ---------------------
 #' 
-#' Rscript PhV_of_ADRs_using_vocab_taxonomy_synthetic_aeolus.R > PhV_of_ADRs_using_vocab_taxonomy_synthetic_aeolus.log
+#' Rscript PhV_of_ADRs_using_vocab_taxonomy_synthetic_aeolus.R 
 #' 
 # set variables -----------------------------------------------------------
 

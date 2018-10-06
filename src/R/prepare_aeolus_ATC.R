@@ -10,7 +10,7 @@ cat("start: ",as.character(Sys.time()),"\n")
 #' 
 #' EXAMPLE RUN ON CLUSTER:
 #' ----------------------
-#' source ../bash/submit_Rjob.sh prepare_aeolus_ATC.R > prepare_aeolus_ATC.log
+#' source ../bash/submit_Rjob.sh prepare_aeolus_ATC.R 
 #' 
 
 # Libraries ---------------------------------------------------------------
