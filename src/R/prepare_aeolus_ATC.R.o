@@ -1,0 +1,72 @@
+Sender: LSF System <openlava@munnin>
+Subject: Job 133314: <Rscript prepare_aeolus_ATC.R -J prepare_aeolus_ATC.R> Done
+
+Job <Rscript prepare_aeolus_ATC.R -J prepare_aeolus_ATC.R> was submitted from host <munnin> by user <npg2108>.
+Job was executed on host(s) <munnin>, in queue <normal>, as user <npg2108>.
+</home/npg2108> was used as the home directory.
+</home/npg2108/Research/Projects/pediatric_pharmacovigilance/src/R> was used as the working directory.
+Started at Sat Oct  6 09:54:20 2018
+Results reported at Sat Oct  6 10:17:14 2018
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+Rscript prepare_aeolus_ATC.R -J prepare_aeolus_ATC.R
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :   1532.31 sec.
+    Max Memory :     29555 MB
+    Max Swap   :     32042 MB
+
+    Max Processes  :         3
+
+The output (if any) follows:
+
+start:  2018-10-06 09:54:20 
+AEOLOUS Tables download...
+
+FAERS reports:  4,272,076 
+
+LAERS reports:  4,280,323 
+
+AEOLOUS Tables tidy up. Remove rows without age_code...
+
+FAERS reports missing age code:  40.45 %
+
+LAERS reports missing age code:  23.22 %
+
+17.69% of outcomes have no mapping to snomed ids, but all drugs have a concept.
+
+AEOLOUS Tables joining of ages to all reports...
+
+Total AERS reports with standard concepts and age:  3,146,308 
+
+AEOLOUS master age...
+
+Report age < 0:  0.02094518 %
+
+Report age == 0:  12.6029 %
+
+Report age >= 120:  0.5780744 %
+
+Total AERS reports with standard concepts and age:  2,748,714 
+
+Download and joining ohdsi concept ids/names to counts tables...
+
+Final report number:  2748714 
+
+Final drug_outcome number:  2161517 
+
+Writing tables...
+
+end:  2018-10-06 10:17:11
+
+PS:
+
+Read file <prepare_aeolus_ATC.R.e> for stderr output of this job.
+

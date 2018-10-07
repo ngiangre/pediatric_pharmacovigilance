@@ -2,8 +2,8 @@
 .DS_Store
 
 #ignore big datasets and dirs
-!data/*.fst
-!data/vocabulary_download_v5_{aaf1154e-b4a4-479b-9ed8-817e30c0ba84}_1508422779545/
+data/*.fst
+data/vocabulary_download_v5_{aaf1154e-b4a4-479b-9ed8-817e30c0ba84}_1508422779545/
 
 #credentials
 .my.cnf
