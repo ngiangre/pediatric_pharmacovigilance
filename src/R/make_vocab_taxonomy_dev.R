@@ -22,7 +22,7 @@ library(data.table)
 
 data_dir <- "../../data/"
 
-dir_path <- paste0(data_dir,"vocabulary_download_v5_{aaf1154e-b4a4-479b-9ed8-817e30c0ba84}_1508422779545/")
+dir_path <- paste0(data_dir,"vocabulary_download_v5_{d62de2e4-9825-4917-8ccb-d92395a5778e}_1535207123450/")
 
 vocab <- "SNOMED"
 
