@@ -1,0 +1,35 @@
+Sender: LSF System <openlava@munnin>
+Subject: Job 133327: <Rscript make_ATC_RxNorm_taxonomy.R -J make_ATC_RxNorm_taxonomy.R> Done
+
+Job <Rscript make_ATC_RxNorm_taxonomy.R -J make_ATC_RxNorm_taxonomy.R> was submitted from host <munnin> by user <npg2108>.
+Job was executed on host(s) <munnin>, in queue <normal>, as user <npg2108>.
+</home/npg2108> was used as the home directory.
+</home/npg2108/Research/Projects/pediatric_pharmacovigilance/src/R> was used as the working directory.
+Started at Sun Oct  7 18:51:43 2018
+Results reported at Sun Oct  7 18:51:57 2018
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+Rscript make_ATC_RxNorm_taxonomy.R -J make_ATC_RxNorm_taxonomy.R
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :     29.28 sec.
+    Max Memory :       374 MB
+    Max Swap   :      5091 MB
+
+    Max Processes  :         3
+
+The output (if any) follows:
+
+start:  2018-10-07 18:51:44 /nend:  2018-10-07 18:51:57
+
+PS:
+
+Read file <make_ATC_RxNorm_taxonomy.R.e> for stderr output of this job.
+
