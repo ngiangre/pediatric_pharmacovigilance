@@ -40,7 +40,7 @@ aeolus <- read_fst(paste0(data_dir,aeolus_file,".fst"),
 
 setkey(aeolus,drug_concept_id,outcome_concept_id)
 adrs <- unique(aeolus[, .(drug_concept_id,outcome_concept_id)])
-cat(paste0(format(nrow(adr_pairs),big.mark=",")," AEDARs"))
+cat(paste0(format(nrow(adrs),big.mark=",")," AEDARs"))
 
 # set table for covariate -------------------------------------------------
 

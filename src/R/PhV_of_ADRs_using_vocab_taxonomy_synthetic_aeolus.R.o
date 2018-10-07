@@ -1,0 +1,36 @@
+Sender: LSF System <openlava@munnin>
+Subject: Job 133329: <Rscript PhV_of_ADRs_using_vocab_taxonomy_synthetic_aeolus.R -J PhV_of_ADRs_using_vocab_taxonomy_synthetic_aeolus.R> Done
+
+Job <Rscript PhV_of_ADRs_using_vocab_taxonomy_synthetic_aeolus.R -J PhV_of_ADRs_using_vocab_taxonomy_synthetic_aeolus.R> was submitted from host <munnin> by user <npg2108>.
+Job was executed on host(s) <munnin>, in queue <normal>, as user <npg2108>.
+</home/npg2108> was used as the home directory.
+</home/npg2108/Research/Projects/pediatric_pharmacovigilance/src/R> was used as the working directory.
+Started at Sun Oct  7 19:00:13 2018
+Results reported at Sun Oct  7 19:01:25 2018
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+Rscript PhV_of_ADRs_using_vocab_taxonomy_synthetic_aeolus.R -J PhV_of_ADRs_using_vocab_taxonomy_synthetic_aeolus.R
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   :     79.13 sec.
+    Max Memory :      1567 MB
+    Max Swap   :      8573 MB
+
+    Max Processes  :         5
+
+The output (if any) follows:
+
+start:  2018-10-07 19:00:13 
+990 AEDARsend:  2018-10-07 19:01:25
+
+PS:
+
+Read file <PhV_of_ADRs_using_vocab_taxonomy_synthetic_aeolus.R.e> for stderr output of this job.
+
