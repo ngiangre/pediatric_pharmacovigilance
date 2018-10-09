@@ -1,0 +1,36 @@
+Sender: LSF System <openlava@munnin>
+Subject: Job 133341: <Rscript PhV_of_hADRs_using_vocab_taxonomy.R ANTIEPILEPTICS 3 dev_age_cat> Done
+
+Job <Rscript PhV_of_hADRs_using_vocab_taxonomy.R ANTIEPILEPTICS 3 dev_age_cat> was submitted from host <munnin> by user <npg2108>.
+Job was executed on host(s) <munnin>, in queue <normal>, as user <npg2108>.
+</home/npg2108> was used as the home directory.
+</home/npg2108/Research/Projects/pediatric_pharmacovigilance/src/R> was used as the working directory.
+Started at Mon Oct  8 16:08:21 2018
+Results reported at Mon Oct  8 18:47:26 2018
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+Rscript PhV_of_hADRs_using_vocab_taxonomy.R ANTIEPILEPTICS 3 dev_age_cat
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time   : 217781.97 sec.
+    Max Memory :     88746 MB
+    Max Swap   :    152185 MB
+
+    Max Processes  :        28
+
+The output (if any) follows:
+
+start:  2018-10-08 16:08:22 
+14,489 AEDARs36,019 AEDARsend:  2018-10-08 18:47:25
+
+PS:
+
+Read file <PhV_of_hADRs_using_vocab_taxonomy.R.e> for stderr output of this job.
+
