@@ -10,7 +10,7 @@ This poster outlines a first-pass pharmacovigilance methodology for detecting AD
 
 ## Coding Workflow
 
-This section outlines the workflow taken for producing the results of this poster. The most detail are in the code itself. But the boxes (indicating the script type) contain the scripts that are used in the methodology. Most of the scripts were run on a private cluster to take advantage of parallelism over multiple cores.
+This section outlines the workflow taken for producing the results of this poster. The most detail are in the code itself. But the boxes (indicating the script type) contain the scripts that are used in the methodology. Most of the scripts were run on a private cluster to take advantage of parallelism over multiple cores. The data directory is not included just due to size so just with cloning from git the code couldn't be run (though I'd be happy to share the data directory with you or share applicable data files). However, hopefully this description will make the analysis for this poster transparent. 
 
 <img src="figs/Script-workflow.png">
 
@@ -38,11 +38,11 @@ The AEOLUS<sup>1</sup> dataset was [downloaded](https://datadryad.org/resource/d
 
 Further processing details can be found in the *Real Data* script.
 
-A synthetic dataset was constructed (see *Synthetic Data* script), where the formatting is exactly the same, but the only difference is that the distribution of ages for 4/1000 sampled ADRs were redistributed to simulate the disproportionality in age categories we want and don't want to detect. 
+A synthetic dataset was constructed (see *Synthetic Data* script), where the formatting is exactly the same, but the only difference is that the distribution of ages for 8/1000 sampled ADRs were redistributed to simulate the disproportionality in age categories we want and don't want to detect. 
 
 ### <u>Adverse drug reaction detection methods</u>
 
-This is the main analysis where pharmacovigilance is performed. These scripts are meant to be used on a cluster (for processing the real data; the synthetic data can be run locally). I ran each script on our cluster using 25 cores, and each individual script took about 3 hours to complete. 
+This is the main analysis where pharmacovigilance is performed. These scripts are meant to be used on a cluster (for processing the real data; the synthetic data can be run locally). I ran each PhV script on our cluster using 25 cores, and each PhV script took about 3 hours to complete. The other scripts either took very little time or, in the case of prepare\_aeolus\_ATC.R, took about 20-30 minutes (this script could be optimized with using *data.table* but I didn't get around to doing that).
 
 The three types of ADRs, as outlined in the poster, are computed in the respective scripts in *Real Data ADR detection*.
 
