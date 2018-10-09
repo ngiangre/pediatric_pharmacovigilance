@@ -1,12 +1,12 @@
 Sender: LSF System <openlava@munnin>
-Subject: Job 133330: <Rscript PhV_of_ADRs.R ANTIEPILEPTICS 3 dev_age_cat> Done
+Subject: Job 133345: <Rscript PhV_of_ADRs.R ANTIEPILEPTICS 3 dev_age_cat> Done
 
 Job <Rscript PhV_of_ADRs.R ANTIEPILEPTICS 3 dev_age_cat> was submitted from host <munnin> by user <npg2108>.
 Job was executed on host(s) <munnin>, in queue <normal>, as user <npg2108>.
 </home/npg2108> was used as the home directory.
 </home/npg2108/Research/Projects/pediatric_pharmacovigilance/src/R> was used as the working directory.
-Started at Sun Oct  7 19:10:43 2018
-Results reported at Sun Oct  7 20:25:55 2018
+Started at Mon Oct  8 23:27:51 2018
+Results reported at Tue Oct  9 00:30:57 2018
 
 Your job looked like:
 
@@ -19,18 +19,18 @@ Successfully completed.
 
 Resource usage summary:
 
-    CPU time   :  97213.27 sec.
-    Max Memory :     90179 MB
-    Max Swap   :    154007 MB
+    CPU time   :  84146.98 sec.
+    Max Memory :     95342 MB
+    Max Swap   :    156484 MB
 
     Max Processes  :        28
 
 The output (if any) follows:
 
-start:  2018-10-07 19:10:43 
+start:  2018-10-08 23:27:51 
 
 Drug/Drug Class:  ANTIEPILEPTICS  and ATC Class level:  3  and stratification variable:  dev_age_cat 
-1,263,805 reports of 14,489 AEDARsend:  2018-10-07 20:25:54
+1,263,805 reports of 14,489 AEDARsend:  2018-10-09 00:30:57
 
 PS:
 

@@ -1,0 +1,10 @@
+start:  2018-10-09 13:55:17 
+File:  ../../data/ADRs_PhV/ATC/ATC_3rd/ANTIEPILEPTICS/ALL_DRUGS/PhV_of_ADRs_stratified_by_dev_age_cat.csv
+There are 50 young age category biased ADRs
+
+Covariate testing
+
+Number of ADRs with minimal covariate confounding: 32
+
+Number of ADRs with observed covariate confounding: 18
+end:  2018-10-09 13:59:20

@@ -1,12 +1,12 @@
 Sender: LSF System <openlava@munnin>
-Subject: Job 133331: <Rscript PhV_of_ADRs_using_vocab_taxonomy.R ANTIEPILEPTICS 3 dev_age_cat> Done
+Subject: Job 133346: <Rscript PhV_of_ADRs_using_vocab_taxonomy.R ANTIEPILEPTICS 3 dev_age_cat> Done
 
 Job <Rscript PhV_of_ADRs_using_vocab_taxonomy.R ANTIEPILEPTICS 3 dev_age_cat> was submitted from host <munnin> by user <npg2108>.
 Job was executed on host(s) <munnin>, in queue <normal>, as user <npg2108>.
 </home/npg2108> was used as the home directory.
 </home/npg2108/Research/Projects/pediatric_pharmacovigilance/src/R> was used as the working directory.
-Started at Sun Oct  7 21:53:44 2018
-Results reported at Sun Oct  7 22:58:34 2018
+Started at Tue Oct  9 08:14:12 2018
+Results reported at Tue Oct  9 09:14:44 2018
 
 Your job looked like:
 
@@ -19,15 +19,15 @@ Successfully completed.
 
 Resource usage summary:
 
-    CPU time   :  85950.31 sec.
-    Max Memory :     87564 MB
-    Max Swap   :    149337 MB
+    CPU time   :  79650.42 sec.
+    Max Memory :     85905 MB
+    Max Swap   :    149078 MB
 
     Max Processes  :        28
 
 The output (if any) follows:
 
-start:  2018-10-07 21:53:44 /n14,489 AEDARsend:  2018-10-07 22:58:34
+start:  2018-10-09 08:14:12 /n14,489 AEDARsend:  2018-10-09 09:14:43
 
 PS:
 

@@ -2,7 +2,10 @@
 .DS_Store
 
 #ignore data dir
-data/
+data/vocab*/*
+data/**/*.csv
+data/**/*.fst
+data/**/*.feather
 
 #credentials
 .my.cnf
