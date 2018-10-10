@@ -1,8 +1,11 @@
 # Using precision pharmacoviglance to detect developmentally-regulated adverse drug reactions: a case study with antiepileptic drugs
 
+
+![](figs/20181011_OHDSI_poster.png)
+
 Code and documentation accompanying the poster "Using precision pharmacoviglance to detect developmentally-regulated adverse drug reactions: a case study with antiepileptic drugs" presented at the 2018 OHDSI symposium in Bethesda, MD, USA
 
-Unfortunately, this repository isn't set up properly as an R project or an R package, so code and documentation is annotated manually. The main purpose is to increase transparency in the methodology used in this project. Subsequent work will employ better software development practices. 
+This repository documents the code and analyses to reproduce the results of the above poster. The main purpose is to increase transparency in the methodology used in this project. Subsequent work will employ better software development practices. 
 
 ## Introduction
 

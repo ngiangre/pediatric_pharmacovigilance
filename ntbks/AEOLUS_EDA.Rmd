@@ -1,0 +1,254 @@
+---
+title: "Introduction to AEOLUS dataset"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,message = F,warning = F)
+```
+
+## Brief Introduction
+
+```{r load}
+
+library(fst)
+library(data.table)
+library(tidyverse)
+
+theme_set(theme_classic())
+
+data_dir <- "../data/"
+aeolus <- read_fst(paste0(data_dir,"aeolus.fst"),as.data.table = T)
+
+```
+
+## Brief Introduction
+
+The Adverse Event Open Learning through Universal Standardization, or AEOLUS, is detailed in the paper by [Banda et al](http://www.nature.com/articles/sdata201626).
+
+Briefly, it contains a standardized version of reports from the FDA's Adverse Event Reporting System, allowing for efficient and reproducible analyses of ADEs. 
+
+The aeolus dataset has `r scales::comma(nrow(aeolus))` rows with `r scales::comma(length(unique(aeolus[,id])))` unique reports.
+
+Below, I briefly show characteristics of this dataset. 
+
+## Table display
+
+```{r display}
+
+aeolus[1:10]
+
+```
+
+## Number of drugs reported per report
+
+```{r num_drugs_per_report}
+
+unique(aeolus[,.(id,drug_concept_id)])[
+  ,.N,by=id
+][
+  order(-N)
+] %>% 
+  ggplot(aes(N)) +
+  geom_histogram() +
+  scale_x_log10() +
+  theme(
+    text = element_text(face="bold",size=16)
+  ) +
+  ylab("Number of Reports") +
+  xlab("Number of Drugs")
+
+```
+
+## Number of outcomes reported per report
+
+```{r num_outcomes_per_report}
+
+unique(aeolus[,.(id,outcome_concept_id)])[
+  ,.N,by=id
+][
+  order(-N)
+] %>% 
+  ggplot(aes(N)) +
+  geom_histogram() +
+  scale_x_log10() +
+  scale_y_continuous(labels = scales::comma) + 
+  xlab("Number of Reports") +
+  ylab("Number of Outcomes") +
+  theme(
+    text = element_text(face="bold",size=16)
+  )
+
+```
+
+## Number of ADRs reported 
+
+```{r num_adrs_per_report}
+
+unique(aeolus[,.(id,drug_concept_id,outcome_concept_id)])[
+  ,.N,by=id
+][
+  order(-N)
+] %>% 
+  ggplot(aes(N)) +
+  geom_histogram() +
+  scale_x_log10() +
+  scale_y_continuous(labels = scales::comma) + 
+  xlab("Number of Reports") +
+  ylab("Number of ADRs") +
+  theme(
+    text = element_text(face="bold",size=16)
+  )
+
+```
+
+## Number of reports per year
+
+```{r reports_per_year}
+
+unique(aeolus[,.(id,report_year)])[
+  ,.N,by=report_year
+][
+  order(report_year)
+][
+  ,.(report_year = as.character(report_year),
+     N)
+] %>% 
+  ggplot(aes(report_year,N,fill=report_year)) +
+  geom_bar(stat="identity") +
+  scale_y_continuous(labels = scales::comma) + 
+  xlab("Report Year") +
+  ylab("Number of Reports") +
+  theme(
+    axis.text.x = element_text(angle=45,vjust=0.7),
+    text = element_text(face="bold",size=16),
+    legend.position = "none"
+  )
+
+```
+
+## Number of reports per age category
+
+```{r reports_per_age_cat}
+
+data <- na.omit(
+  unique(
+    aeolus[,.(id,dev_age_cat)]
+    )[
+  ,.N,by=dev_age_cat
+  ]
+)[
+  order(dev_age_cat)
+][
+  ,.(dev_age_cat = as.character(dev_age_cat),
+     N)
+] 
+
+age_cats <- as.character(unique(data[,dev_age_cat]))
+ord <- order(sapply(strsplit(age_cats,"[\\[(]"),function(x){strsplit(x[2],",")[[1]][1]}) %>% as.integer())
+seq_age_cats <- age_cats[ord]
+
+data$dev_age_cat <- factor(data$dev_age_cat,levels=seq_age_cats)
+
+
+data %>% 
+  ggplot(aes(dev_age_cat,N,fill=dev_age_cat)) +
+  geom_bar(stat="identity") +
+  scale_y_continuous(trans="log10",labels = scales::comma) + 
+  xlab("Human Development Age Category") +
+  ylab("Number of Reports") +
+  theme(
+    axis.text.x = element_text(angle=45,vjust=0.7),
+    text = element_text(face="bold",size=16),
+    legend.position = "none"
+  )
+
+data <- na.omit(
+  unique(
+    aeolus[,.(id,age_cat)]
+    )[
+  ,.N,by=age_cat
+  ]
+)[
+  ,.(age_cat = as.character(age_cat),
+     N)
+]
+
+age_cats <- as.character(unique(data[,age_cat]))
+ord <- order(sapply(strsplit(age_cats,"[\\[(]"),function(x){strsplit(x[2],",")[[1]][1]}) %>% as.integer())
+seq_age_cats <- age_cats[ord]
+
+data$age_cat <- factor(data$age_cat,levels=seq_age_cats)
+
+data %>% 
+  ggplot(aes(age_cat,N,fill=age_cat)) +
+  geom_bar(stat="identity") +
+  scale_y_continuous(labels = scales::comma) + 
+  xlab("5-year Age Category") +
+  ylab("Number of Reports") +
+  theme(
+    axis.text.x = element_text(angle=45,vjust=0.7),
+    text = element_text(face="bold",size=16),
+    legend.position = "none"
+  )
+
+```
+
+## Condition types
+
+```{r condition_types}
+
+aeolus[
+  ,.(id,outcome_domain_id)
+  ][
+    ,.N,
+    by=outcome_domain_id
+  ][
+    order(-N)
+  ] %>% 
+  ggplot(aes(outcome_domain_id,N,fill=outcome_domain_id)) +
+  geom_bar(stat="identity") +
+  scale_y_continuous(trans="log10",labels=scales::comma) +
+  coord_flip() +
+  ylab("Number of Reports") +
+  xlab("Condition domain") +
+  theme(
+    legend.position = "none",
+    text = element_text(face="bold",size=16)
+  )
+  
+```
+
+## ATC 1st distribution of drugs
+
+```{r atc_1,fig.height=10}
+
+df <- aeolus[!is.na(atc_1st),
+       .(id,atc_1st)][
+         ,.N,
+         by=atc_1st
+       ][
+         order(-N)
+       ]
+
+df$atc_1st <- factor(df$atc_1st,levels=unique(df$atc_1st))
+
+df %>% 
+  ggplot(aes(atc_1st,N,fill=atc_1st)) +
+  geom_bar(stat="identity") +
+  scale_y_continuous(trans="log10",labels=scales::comma) +
+  coord_flip() +
+  xlab("System of drug action") +
+  ylab("Number of Reports") + 
+  guides(
+    fill=guide_legend(
+      ncol = 1,
+      title.position = "top")
+    ) +
+  theme(
+    legend.position = "bottom",
+    axis.text.y = element_text(size=0),
+    text = element_text(face="bold",size=10)
+  )
+
+```
