@@ -1,1 +1,3 @@
-/ntbks/*
+ntbks/*.Rmd
+ntbks/*.md
+ntbks/*files/

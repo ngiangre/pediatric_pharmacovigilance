@@ -1,6 +1,6 @@
 #ignore ntbk directories
 figs/*files/*
-ntbk/*files/*
+ntbks/*files/*
 
 #Mac specs
 .DS_Store
