@@ -1,3 +1,4 @@
 ntbks/*.Rmd
 ntbks/*.md
 ntbks/*files/
+*.js linguist-vendored=false
