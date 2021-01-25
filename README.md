@@ -1,5 +1,6 @@
 # Using precision pharmacoviglance to detect developmentally-regulated adverse drug reactions: a case study with antiepileptic drugs
 
+[![DOI](https://zenodo.org/badge/150485336.svg)](https://zenodo.org/badge/latestdoi/150485336)
 
 ![](figs/20181011_OHDSI_poster.png)
 
